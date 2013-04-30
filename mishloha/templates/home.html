@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Adventure Works</title>
+        <link href="{{ STATIC_URL }}main.css" rel="stylesheet" media="screen">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>first name</th>
+                    <th>last name</th>
+                    <th>phone</th>
+                    <th>details</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for customer in customers %}
+                <tr id="cust_{{ customer.id }}">
+                    <td>{{ customer.id }}</td>
+                    <td>{{ customer.f_name }}</td>
+                    <td>{{ customer.l_name }}</td>
+                    <td>{{ customer.phone }}</td>
+                    <td><button class="btn-show-details">show</button></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <script src="{{ STATIC_URL }}adventure.js"></script>
+    </body>
+</html>
