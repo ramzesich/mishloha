@@ -6,7 +6,7 @@
         <link href="{{ STATIC_URL }}main.css" rel="stylesheet" media="screen">
     </head>
     <body>
-        <table>
+        <table id="tbl_customers">
             <thead>
                 <tr>
                     <th>id</th>
@@ -18,12 +18,12 @@
             </thead>
             <tbody>
             {% for customer in customers %}
-                <tr id="cust_{{ customer.id }}">
+                <tr id="row_{{ customer.id }}">
                     <td>{{ customer.id }}</td>
                     <td>{{ customer.f_name }}</td>
                     <td>{{ customer.l_name }}</td>
                     <td>{{ customer.phone }}</td>
-                    <td><button class="btn-show-details">show</button></td>
+                    <td><button id="btn_{{ customer.id }}" class="btn-show-details">show</button></td>
                 </tr>
             {% endfor %}
             </tbody>
