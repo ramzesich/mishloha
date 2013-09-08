@@ -1,3 +1,3 @@
 mishloha
 ========
-Mishloha test exercise.
+A pre-interview test excercise for the Israeli Mishloha company.
